@@ -3,30 +3,35 @@
     flex-direction: row;
     justify-content: center;
     margin: 10px;
-    height: 300px;
+    height: 417px;
     
     .book-cover {
-        width: 200px;
-        margin: 20px;
+        width: 260px;
+        margin: 27px;
     }
 
     .book-detail {
-        margin: 20px;
+        margin: 27px;
 
         .book-title {
-            font-size: 35px;
+            font-size: 27px;
+            font-weight: 600;
+            margin-bottom: 60px;
+
+            .value {
+                font-size: 27px;  
+                opacity: 0.5;
+            }
+        }
+
+        .book-field {
+            font-size: 17px;
             font-weight: 600;
             margin-bottom: 40px;
         }
 
-        .book-field {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
         .value {
-            font-size: 20px;  
+            font-size: 17px;  
             opacity: 0.5;
         }
     }
