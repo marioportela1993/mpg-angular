@@ -1,23 +1,32 @@
+.book-detail-container {
+    display: flex;
+    justify-content: center;
+}
 .book-box {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
     height: 417px;
+    flex-direction: row;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px #999;
+    width: 900px;
     
     .book-cover {
         width: 260px;
-        margin: 27px;
+        margin: 7px 30px 7px 7px;
     }
 
     .book-detail {
-        margin: 27px;
+        margin: 7px 7px 7px 30px;
+        width: 590px;
 
         .book-title {
+            border-bottom: 5px solid rgb(185, 221, 61);
             font-size: 27px;
             font-weight: 600;
-            margin-bottom: 60px;
-
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            
             .value {
                 font-size: 27px;  
                 opacity: 0.5;
