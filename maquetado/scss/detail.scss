@@ -1,16 +1,28 @@
 .book-box {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    margin: 10px;
+    height: 300px;
     
+    .book-cover {
+        width: 200px;
+        margin: 20px;
+    }
+
     .book-detail {
+        margin: 20px;
+
         .book-title {
             font-size: 35px;
-            margin-bottom: 25px;
+            font-weight: 600;
+            margin-bottom: 40px;
         }
 
         .book-field {
             font-size: 20px;
-            margin-bottom: 15px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .value {
