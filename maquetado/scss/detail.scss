@@ -1,8 +1,11 @@
 .book-detail-container {
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
+    padding: 10px;
 
-    .book-box {
+    .book-detail-box {
+        background-color: white;
         box-shadow: 2px 4px 6px #999;
         display: flex;
         flex-direction: row;
@@ -11,7 +14,7 @@
         padding: 15px;
         width: 900px;
         
-        .book-cover {        
+        .book-detail-cover {        
             position: relative;
 
             .book-img {
@@ -29,12 +32,12 @@
             }
         }
     
-        .book-detail {
+        .book-detail-info {
             margin: 7px 7px 7px 30px;
             width: 590px;
     
             .book-title {
-                border-bottom: 5px solid rgb(185, 221, 61);
+                border-bottom: 5px solid #bed23d;
                 font-size: 27px;
                 font-weight: 600;
                 margin-bottom: 40px;
