@@ -2,6 +2,7 @@
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
+    height: 100vh;
     padding: 60px;
 
     .book-detail-box {
@@ -60,5 +61,52 @@
                 opacity: 0.5;
             }
         }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .book-detail-box {
+            box-shadow: 8px 6px 6px #999;
+            height: 100%;
+            max-height: 1200px;
+            flex-wrap: wrap;
+            justify-content: center;
+    
+            .book-detail-cover { 
+                justify-content: center;
+                display: flex; 
+                
+                .book-img {
+                    padding: 50px 70px 20px 70px;
+                    width: 80%;
+                }
+
+                .book-badge {
+                    right: 165px;
+                    top: 38px;
+                }
+            }
+
+            .book-detail-info { 
+                width: 100%;
+                
+                .book-field {
+                    font-size: 30px;
+                    margin-bottom: 40px;
+                }
+        
+                .value {
+                    font-size: 30px;  
+                    opacity: 0.5;
+                }
+
+                .book-title {
+                    font-size: 47px;
+                    
+                    .value {
+                        font-size: 47px;  
+                    }
+                }
+            }
+        } 
     }
 }
