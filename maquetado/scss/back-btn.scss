@@ -3,9 +3,7 @@
   font-size: 20px;
   font-weight: 300;
   height: 35px;
-  left: 240px;
   position: absolute;
-  top: 30px;
   width: 92px;
 
   &::before {
@@ -14,19 +12,5 @@
       background-size: 23px;
       content: '';
       padding-left: 33px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .back-btn { 
-    font-size: 40px;
-    left: 420px;
-    top: 1299px;
-
-    &::before {
-      background-size: 44px;
-      content: 'Atrás';
-      padding-left: 53px;
-    }
   }
 }
