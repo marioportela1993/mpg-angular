@@ -42,15 +42,16 @@
       .login-btn {
           border-radius: 5px;
           background-color: #bed23d;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           height: 50px;
           margin-bottom: 20px;
           margin-top: 15px;
           position: relative;
+          color: white;
+          text-align: center;
           width: 100%;
-
-          a {
-            color: white;
-          }
 
           &::after {
             border-bottom:  2px solid black;
