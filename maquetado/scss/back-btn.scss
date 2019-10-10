@@ -12,7 +12,7 @@
       background-image: url('assets/back-arrow.png');
       background-repeat: no-repeat;
       background-size: 23px;
-      content: 'Atrás';
+      content: '';
       padding-left: 33px;
   }
 }
@@ -25,7 +25,7 @@
 
     &::before {
       background-size: 44px;
-      content: 'Atrás';
+      content: '';
       padding-left: 53px;
     }
   }
