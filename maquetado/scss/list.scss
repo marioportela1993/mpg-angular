@@ -13,7 +13,12 @@
         height: 300px;
         margin: 15px;
         padding: 24px;
+        transition: all 0.4s linear;
         width: 200px;
+
+        &:hover {
+            transform: scaleY(1.1) scaleX(1.1);
+        }
 
         .book-list-cover {        
             .book-img {
