@@ -1,0 +1,17 @@
+<div class="login-container">
+  <div class="login-box">
+      <img class="logo-img" src="assets/Logo-wolox.png" alt="logo wolox">
+      <form [formGroup]="form" (ngSubmit) = "signUp(form.value)" class="form-box">
+        <label class="input-label">Firts name</label>
+        <input class="input-data" formControlName="firstName" type="text" name="first_name">
+        <label class="input-label">Last name</label>
+        <input class="input-data" formControlName="lastName" type="text" name="last_name">
+        <label class="input-label">Email</label>
+        <input class="input-data" formControlName="email" type="text" name="email">
+        <label class="input-label">Password</label>
+        <input class="input-data" formControlName="password" type="password" name="password">
+        <button class="sign-up-btn" type="submit">Sign Up</button>
+      </form>
+      <button class="login-btn">Login</button>
+  </div>
+</div>
