@@ -33,6 +33,6 @@ export class SignUpComponent {
     console.log({ user });
 
     this.service.createUser({ user }).subscribe(
-      response => console.log(`Response: ${JSON.stringify(response)}`), error => console.log(error), () => console.log('fd'));
+      response => console.log(`User ${JSON.stringify(response)} created successfully`), () => console.log('error signing up the user'));
   }
 }
