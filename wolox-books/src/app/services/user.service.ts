@@ -15,8 +15,6 @@ export class UserService {
 
   createUser(post: any): Observable<any> {
     console.log(`Attempting to create the user ${post}`);
-    return this.http.post(`${this.urlApi}/users`, post).pipe(
-      tap(newUser => console.log(`added user: ${newUser}`))
-    );
+    return this.http.post(`${this.urlApi}/users`, post);
   }
 }
