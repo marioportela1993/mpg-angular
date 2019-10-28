@@ -31,7 +31,6 @@ export class SignUpComponent {
       password_confirmation: post.password,
       locale: 'en'
     }
-    console.log({ user });
 
     this.service.createUser({ user }).subscribe(
       response => console.log(`User ${JSON.stringify(response)} created successfully`), () => console.log('error signing up the user'), () => {
