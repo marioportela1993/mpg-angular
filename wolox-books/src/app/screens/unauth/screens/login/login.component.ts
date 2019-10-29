@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-<<<<<<< HEAD:wolox-books/src/app/screens/unauth/screens/login/login.component.ts
 import { UserService } from '../../../../services/user.service';
 import { LocalStorageService } from '../../../../services/local-storage.service';
-=======
-import { UserService } from '../../services/user.service';
-import { LocalStorageService } from '../../services/local-storage.service';
->>>>>>> angular-login:wolox-books/src/app/screens/login/login.component.ts
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
