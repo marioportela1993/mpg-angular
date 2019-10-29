@@ -18,12 +18,16 @@ export class UserService {
     return this.http.post(`${this.urlApi}/users`, post);
   }
 
-  signUpUser(user: any): Observable<any> {
-    console.log(`Attempting to login the user ${user}`);
+  signInUser(user: any): Observable<any> {
+    console.log(`Attempting to login the user ${JSON.stringify(user)}`);
     return this.http.post(`${this.urlApi}/users/sessions`, user);
   }
 
   loggedIn(){
     return !!this.localStore.getValue('token');
+  }
+
+  getToken() {
+    return this.localStore.getValue('token');
   }
 }

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule }from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS }from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,7 @@ import { AuthComponent } from './screens/auth/auth.component';
 import { BookListComponent } from './screens/auth/screens/book-list/book-list.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,11 @@ import { UnauthGuard } from './unauth.guard';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ AuthGuard, UnauthGuard ],
+  providers: [ AuthGuard, UnauthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
