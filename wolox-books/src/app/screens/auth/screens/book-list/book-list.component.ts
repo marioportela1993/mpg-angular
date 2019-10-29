@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BookService } from '../../../../services/book.service';
 
 @Component({
   selector: 'app-book-list',
@@ -7,5 +8,20 @@ import { Component } from '@angular/core';
 })
 export class BookListComponent {
 
-  constructor() { }
+  books = [];
+
+  constructor(private bookService: BookService) { }
+
+  ngOnInit() {
+    this.bookService.getBooks().subscribe(
+      response => { 
+        this.books = response;
+      }, 
+      () => console.log('error getting books')
+    );
+  }
+  
+  getBooks() {
+    return this.books;
+  }
 }

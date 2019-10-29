@@ -30,7 +30,7 @@ export class LoginComponent {
       password: post.password
     }
 
-    this.service.signUpUser({ session }).subscribe(
+    this.service.signInUser({ session }).subscribe(
       response => this.localStorage.setValue('token', response.access_token), 
       () => console.log('error login the user'), 
       () => this.sendToAuth()
