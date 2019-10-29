@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
 import { UserService } from '../../../../services/user.service';
 import { LocalStorageService } from '../../../../services/local-storage.service';
 @Component({
@@ -36,10 +35,6 @@ export class LoginComponent {
       () => console.log('error login the user'), 
       () => this.sendToAuth()
     );
-  }
-
-  sendToSignUp() {
-    this.router.navigate(['sign-up']);
   }
 
   sendToAuth() {
