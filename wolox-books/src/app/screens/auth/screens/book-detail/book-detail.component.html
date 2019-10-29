@@ -1,24 +1,24 @@
 <div class="grid-container">
-  <a class="back-btn" (click)="toBooksList()">Atrás</a>
+  <a class="back-btn" (click)="toBooksList()" i18n>Back</a>
   <div class="book-detail-container">    
-      <h3 class="book-title">{{ book?.title }}</h3>
-      <h3 class="book-genre">({{ book?.genre }})</h3>
+      <h3 class="book-title">{{book?.title}}</h3>
+      <h3 class="book-genre">({{book?.genre}})</h3>
       <div class="book-detail-cover">
           <img class="book-img" src="{{ book?.image_url }}" alt="book cover">
           <img class="book-badge" src="assets/badge.png" alt="book badge">
       </div>
       <div class="book-detail-info">
-        <div class="book-field">
+        <div class="book-field" i18n>
           Book author:
-          <h3 class="value">{{ book?.author }}</h3>
+          <h3 class="value">{{book?.author}}</h3>
         </div>
-        <div class="book-field">
+        <div class="book-field" i18n>
           Publisher:
-          <h3 class="value">{{ book?.publisher }}</h3>
+          <h3 class="value">{{book?.publisher}}</h3>
         </div>
-        <div class="book-field">
+        <div class="book-field" i18n>
           Year of publication: 
-          <h3 class="value">{{ book?.year }}</h3>
+          <h3 class="value">{{book?.year}}</h3>
         </div>
       </div>
   </div>

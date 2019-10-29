@@ -33,6 +33,12 @@
             "scripts": []
           },
           "configurations": {
+            "es": {
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nLocale": "es",
+              "i18nFormat": "xlf",
+              "aot": true
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -70,6 +76,9 @@
             "browserTarget": "wolox-books:build"
           },
           "configurations": {
+            "es": {
+              "browserTarget": "wolox-books:build:es"
+            },
             "production": {
               "browserTarget": "wolox-books:build:production"
             }
@@ -118,6 +127,9 @@
             "devServerTarget": "wolox-books:serve"
           },
           "configurations": {
+            "es": {
+              "devServerTarget": "test-i18n:serve:es"
+            },
             "production": {
               "devServerTarget": "wolox-books:serve:production"
             }
