@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -13,7 +11,7 @@ export class LoginComponent {
 
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private service: UserService, private router: Router) {
+  constructor(private fb: FormBuilder, private service: UserService) {
     this.form = fb.group({
       email: [null, Validators.required],
       password: [null, Validators.required]
@@ -28,9 +26,5 @@ export class LoginComponent {
 
     this.service.signUpUser({ session }).subscribe(
       response => console.log(response.access_token), () => console.log('error login the user'));
-  }
-
-  sendToSignUp() {
-    this.router.navigate(['sign-up']);
   }
 }
