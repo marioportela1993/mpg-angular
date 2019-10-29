@@ -4,6 +4,7 @@ import { SignUpComponent } from './screens/unauth/screens/sign-up/sign-up.compon
 import { LoginComponent } from './screens/unauth/screens/login/login.component';
 import { AuthComponent } from './screens/auth/auth.component';
 import { BookListComponent } from './screens/auth/screens/book-list/book-list.component';
+import { BookDetailComponent } from './screens/auth/screens/book-detail/book-detail.component';
 import { AuthGuard } from './auth.guard';
 import { UnauthGuard } from './unauth.guard';
 
@@ -30,6 +31,11 @@ const routes: Routes = [
       {
         path: '',
         component: BookListComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: ':id',
+        component: BookDetailComponent,
         canActivate: [AuthGuard]
       }
     ]

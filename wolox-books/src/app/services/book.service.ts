@@ -15,4 +15,8 @@ export class BookService {
     console.log('Attempting to get books');
     return this.http.get(`${this.urlApi}/books`);
   }
+
+  getBookById(id: any): any {
+    return this.http.get(`${this.urlApi}/books/${id}`);
+  }
 }
