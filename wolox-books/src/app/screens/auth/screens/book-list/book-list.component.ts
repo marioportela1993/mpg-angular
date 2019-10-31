@@ -7,7 +7,7 @@ import { BookService } from '../../../../services/book.service';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss']
 })
-export class BookListComponent {
+export class BookListComponent implements OnInit {
 
   books = [];
 
