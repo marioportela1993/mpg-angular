@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from '../../services/user.service';
-import { LocalStorageService } from '../../services/local-storage.service';
+import { UserService } from '../../../../services/user.service';
+import { LocalStorageService } from '../../../../services/local-storage.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -30,7 +30,7 @@ export class LoginComponent {
       password: post.password
     }
 
-    this.service.signUpUser({ session }).subscribe(
+    this.service.signInUser({ session }).subscribe(
       response => this.localStorage.setValue('token', response.access_token), 
       () => console.log('error login the user'), 
       () => this.sendToAuth()
@@ -38,6 +38,6 @@ export class LoginComponent {
   }
 
   sendToAuth() {
-    this.router.navigate(['auth']);
+    this.router.navigate(['books']);
   }
 }
