@@ -8,7 +8,7 @@ import { Book } from '../book';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss']
 })
-export class BookListComponent {
+export class BookListComponent implements OnInit {
   public books: Book[] = [];
 
   constructor(private bookService: BookService, private router: Router) { }
