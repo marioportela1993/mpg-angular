@@ -35,11 +35,7 @@ export class SignUpComponent {
 
     this.service.createUser({ user }).subscribe(
       response => console.log(`User ${JSON.stringify(response)} created successfully`), () => console.log('error signing up the user'), () => {
-        this.sendToLogin();
+        this.router.navigate(['login']);
       });
-  }
-
-  sendToLogin() {
-    this.router.navigate(['login']);
   }
 }
