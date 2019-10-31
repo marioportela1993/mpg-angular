@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -10,7 +12,7 @@ export class SignUpComponent {
 
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private service: UserService) {
     this.form = fb.group({
       firstName: [null, Validators.required],
       lastName: [null, Validators.required],
@@ -25,8 +27,12 @@ export class SignUpComponent {
       last_name: post.lastName,
       email: post.email,
       password: post.password,
-      password_confirmation: post.password
+      password_confirmation: post.password,
+      locale: 'en'
     };
     console.log({ user });
+
+    this.service.createUser({ user }).subscribe(
+      response => console.log(`User ${JSON.stringify(response)} created successfully`), () => console.log('error signing up the user'));
   }
 }
