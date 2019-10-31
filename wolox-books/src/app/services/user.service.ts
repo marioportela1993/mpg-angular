@@ -15,4 +15,9 @@ export class UserService {
     console.log(`Attempting to create the user ${post}`);
     return this.http.post(`${this.urlApi}/users`, post);
   }
+
+  signUpUser(user: any): Observable<any> {
+    console.log(`Attempting to login the user ${user}`);
+    return this.http.post(`${this.urlApi}/users/sessions`, user);
+  }
 }
